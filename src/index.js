@@ -1,1 +1,3 @@
-console.log('Webpack project!');
+import navSlide from './burgerMenu';
+
+navSlide();
