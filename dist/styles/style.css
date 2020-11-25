@@ -55,8 +55,10 @@ header .hamburger-menu {
 
 header .hamburger-menu .line {
   border: 1px solid white;
+  border-radius: 5px;
   display: block;
   margin-bottom: 6px;
+  transition: all 0.3s ease;
 }
 /**********************************/
 
@@ -125,7 +127,30 @@ footer .contacts .social-logos {
 
 /* For burger menu when is active */
 .nav-active {
-  transform: translateX(0%);
+  transform: translateX(100%);
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 /**************** Media Queries ************/
@@ -150,7 +175,6 @@ footer .contacts .social-logos {
     height: 80vh;
     width: 100%;
     background-color: rgb(95, 62, 0);
-    transform: translateX(100%);
     transition: transform 0.5s ease-in;
   }
 

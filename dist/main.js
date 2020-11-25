@@ -1,1 +1,1 @@
-(()=>{"use strict";(()=>{const e=document.querySelector(".hamburger-menu");document.querySelector(".menu-open"),e.addEventListener("click",(()=>{e.classList.toggle("nav-active")}))})()})();
+(()=>{"use strict";(()=>{const e=document.querySelector(".hamburger-menu"),t=document.querySelector(".menu-open"),n=t.querySelectorAll(".nav-links .nav-link");e.addEventListener("click",(()=>{t.classList.toggle("nav-active"),n.forEach(((e,t)=>{e.style.animation?e.style.animation="":e.style.animation=`navLinkFade 0.5s forwards ease ${t/7+1}s`})),e.classList.toggle("toggle")}))})()})();
