@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+}
+
+/**************** HEADER ************/
+header {
+  background-color: rgb(95, 62, 0);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  height: 10vh;
+}
+
+header .brand {
+  color: #ccc;
+  font-family: "Caveat", cursive;
+}
+
+header nav {
+  color: white;
+  width: 20%;
+}
+
+header nav .nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav .nav-links .nav-link {
+  list-style: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+header nav .nav-links .nav-link:hover {
+  text-decoration: underline;
+}
+
+/******** HAMBURGER MENU **********/
+
+header .hamburger-menu {
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
+  padding: 12px 0px;
+  display: none;
+}
+
+header .hamburger-menu .line {
+  border: 1px solid white;
+  display: block;
+  margin-bottom: 6px;
+}
+/**********************************/
+
+/**************** CONTENT ************/
+#content {
+  height: 80vh;
+  position: relative;
+  color: white;
+}
+
+#content .background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("../images/dish.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  filter: grayscale(70%) brightness(40%);
+  color: rgb(255, 255, 255);
+  z-index: -1;
+}
+
+#content .menu-open {
+  display: none;
+}
+/**********************************/
+
+/**************** FOOTER ************/
+footer {
+  height: 10vh;
+  background-color: rgb(58, 58, 58);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  color: #ccc;
+}
+
+footer #footer-logo {
+  font-size: 20px;
+  font-family: "Caveat", cursive;
+  display: inline;
+}
+
+footer .contacts {
+  font-size: 20px;
+}
+
+footer .contacts .social-logos {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.social-logos .logo {
+  width: 20px;
+  height: 20px;
+  fill: rgb(153, 126, 76);
+}
+
+.social-logos .logo:hover {
+  fill: white;
+}
+/**********************************/
+
+/* For burger menu when is active */
+.nav-active {
+  transform: translateX(0%);
+}
+
+/**************** Media Queries ************/
+@media screen and (max-width: 1152px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header .hamburger-menu {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  #content .menu-open {
+    display: block;
+    z-index: 99;
+    position: absolute;
+    right: 0;
+    height: 80vh;
+    width: 100%;
+    background-color: rgb(95, 62, 0);
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  #content .menu-open .nav-links {
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  #content .menu-open .nav-links .nav-link {
+    font-size: 25px;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  #content .menu-open .nav-links .nav-link:hover {
+    text-decoration: underline;
+  }
+}
+/**********************************/
