@@ -1,22 +1,36 @@
-const navSlide = () => {
-    const burger = document.querySelector('.hamburger-menu');
-    const nav = document.querySelector('.menu-open');
-    const navLinks = nav.querySelectorAll('.nav-links .nav-link');
+const createBackgroundDiv = () => {
+    const contentDiv = document.getElementById('content');
+    const background = document.createElement('div');
+    background.classList.add('background');
 
-    burger.addEventListener('click', () => {
-        // Toggle menu slide
-        nav.classList.toggle('nav-active');
+    contentDiv.append(background);
+}
 
-        // Animate each link
-        navLinks.forEach((link, index) => {
-            link.style.animation ?
-            link.style.animation = '' :
-            link.style.animation =  `navLinkFade 0.5s forwards ease ${index / 7 + 1}s`;
-        });
+const createNavSlide = () => {
+    const contentDiv = document.getElementById('content');
 
-        // Burger menu animation
-        burger.classList.toggle('toggle');
+    // Create menu-open div
+    const nav = document.createElement('div');
+    nav.className = "menu-open nav-active";
+    contentDiv.append(nav);
+
+    // Create links container
+    const navLinksContainer = document.createElement('ul');
+    navLinksContainer.classList.add("menu-links");
+    nav.appendChild(navLinksContainer);
+
+    // Create links inside links container
+    const menuVoices = ["Home", "About", "Menu", "Contact"];
+    menuVoices.forEach((voice) => {
+        let link = document.createElement('li');
+        link.classList.add("menu-link");
+        link.innerText = voice;
+
+        navLinksContainer.append(link);
     });
 }
 
-export default navSlide;
+export {
+    createBackgroundDiv,
+    createNavSlide
+};

@@ -178,7 +178,7 @@ footer .contacts .social-logos {
     transition: transform 0.5s ease-in;
   }
 
-  #content .menu-open .nav-links {
+  #content .menu-open .menu-links {
     height: 100%;
     list-style-type: none;
     display: flex;
@@ -187,13 +187,13 @@ footer .contacts .social-logos {
     justify-content: space-around;
   }
 
-  #content .menu-open .nav-links .nav-link {
+  #content .menu-open .menu-links .menu-link {
     font-size: 25px;
     cursor: pointer;
     opacity: 0;
   }
 
-  #content .menu-open .nav-links .nav-link:hover {
+  #content .menu-open .menu-links .menu-link:hover {
     text-decoration: underline;
   }
 }
