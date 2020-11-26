@@ -1,0 +1,66 @@
+header {
+  background-color: rgb(95, 62, 0);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  height: 10vh;
+}
+
+header .brand {
+  color: #ccc;
+  font-family: "Caveat", cursive;
+}
+
+header nav {
+  color: white;
+  width: 20%;
+}
+
+header nav .nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav .nav-links .nav-link {
+  list-style: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+header nav .nav-links .nav-link:hover {
+  text-decoration: underline;
+}
+
+/******** HAMBURGER MENU **********/
+
+header .hamburger-menu {
+  width: 30px;
+  height: 40px;
+  cursor: pointer;
+  padding: 12px 0px;
+  display: none;
+}
+
+header .hamburger-menu .line {
+  border: 1px solid white;
+  border-radius: 5px;
+  display: block;
+  margin-bottom: 6px;
+  transition: all 0.3s ease;
+}
+
+/*** Media query ***/
+@media screen and (max-width: 1152px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  header .hamburger-menu {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+  }
+}
