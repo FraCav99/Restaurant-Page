@@ -26,6 +26,139 @@
   height: 100%;
 }
 
+/**** Home Section ****/
+#content .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#content .home h1,
+h2,
+h3 {
+  line-height: 1.5;
+}
+
+#content .home h1,
+h2 {
+  font-family: "Caveat", cursive;
+}
+
+#content .home h1 {
+  font-size: 100px;
+}
+
+#content .home h2 {
+  font-size: 40px;
+  font-style: italic;
+}
+
+#content .home h3 {
+  font-size: 30px;
+  font-style: italic;
+}
+
+/**** About Section ****/
+#content .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#content .about h1 {
+  font-size: 60px;
+  font-family: "Caveat", cursive;
+  font-style: italic;
+  text-align: center;
+}
+
+#content .about p {
+  text-align: center;
+  font-size: 25px;
+  width: 50%;
+}
+
+/**** Home Section ****/
+#content .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#content .menu h1 {
+  font-family: "Caveat", cursive;
+  font-size: 60px;
+}
+
+#content .menu .menu-container {
+  font-style: italic;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+/**** Contact Section ****/
+#content .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#content .contact h1 {
+  font-family: "Caveat", cursive;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+#content .contact form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+#content .contact form input {
+  margin: 0px auto 20px auto;
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 20px;
+  border-bottom: 2px solid #5f3e00;
+  padding-bottom: 4px;
+}
+
+#content .contact form textarea {
+  margin: 20px auto;
+  background: none;
+  border: none;
+  border-bottom: 2px solid #5f3e00;
+  padding-bottom: 4px;
+  color: #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+#content .contact form button {
+  width: 100px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  margin: auto;
+  background-color: white;
+  color: #5f3e00;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+#content .contact form button:hover {
+  background-color: #5f3e00;
+  color: white;
+}
+
+/**********************/
+
 /**** Media query ****/
 @media screen and (max-width: 1152px) {
   #content .menu-open {
@@ -56,5 +189,12 @@
 
   #content .menu-open .menu-links .menu-link:hover {
     text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 684px) {
+  #content .about p {
+    font-size: 20px;
+    width: 90%;
   }
 }
